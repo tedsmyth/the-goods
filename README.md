@@ -1,22 +1,49 @@
-# Collaborative Project
+# The Goods - Solana Meme Token
 
-Welcome to our collaborative project! This repository is set up for building an app or game together.
+A meme token built on the Solana blockchain.
+
+## Prerequisites
+
+- Node.js
+- Solana CLI tools
+- NPM or Yarn
 
 ## Getting Started
 
 1. Clone the repository:
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/tedsmyth/the-goods.git
 ```
 
 2. Navigate to the project directory:
 ```bash
-cd <repository-name>
+cd the-goods
 ```
 
-## Project Structure
+3. Install dependencies:
+```bash
+npm install
+```
 
-(To be defined based on project requirements)
+4. Create your token on devnet:
+```bash
+node createToken.js
+```
+
+This will:
+- Create a new token mint
+- Mint 1 billion tokens
+- Save the token information to `tokenInfo.json`
+
+## Development
+
+The token is initially created on Solana's devnet for testing. The mint authority and freeze authority are set to the wallet that creates the token.
+
+## Token Details
+
+- Decimals: 9 (same as SOL)
+- Initial Supply: 1,000,000,000 tokens
+- Network: Solana Devnet (initially)
 
 ## Contributing
 
@@ -38,10 +65,11 @@ git push origin feature/your-feature-name
 
 4. Create a Pull Request on GitHub
 
-## Contributors
+## Security
 
-- [Your Name]
-- [Your Friend's Name]
+- The wallet.json file contains your private key - NEVER commit this file
+- The token's mint authority can create more tokens
+- The freeze authority can freeze token accounts
 
 ## License
 

@@ -53,3 +53,7 @@ venv/
 dist/
 build/
 out/
+
+# Solana wallet
+wallet.json
+tokenInfo.json
